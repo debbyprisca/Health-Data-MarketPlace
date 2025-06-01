@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { FaSearch, FaFilter, FaDatabase, FaStar, FaEye, FaShoppingCart, FaWallet } from 'react-icons/fa';
+import { FaSearch, FaFilter,FaDatabase, FaStar, FaEye, FaShoppingCart, FaWallet, FaCheckCircle } from 'react-icons/fa';
 import { useAuth } from '../contexts/AuthContext';
 import { useBlockchain } from '../contexts/BlockchainContext';
 
