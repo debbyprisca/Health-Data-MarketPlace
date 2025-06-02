@@ -39,7 +39,7 @@ This dataset is particularly valuable for researchers studying:
     seller: '0x1234567890abcdef1234567890abcdef12345678',
     sellerName: 'HealthDataProvider1',
     rating: 4.7,
-    reviews: 24,
+reviewCount: 24,
     samples: 500,
     verified: true,
     purchaseCount: 18,
@@ -798,27 +798,28 @@ function DatasetDetails() {
                 </ChartGrid>
               </PreviewSection>
               
-              <ReviewsSection>
-                <SectionTitle>Researcher Reviews</SectionTitle>
-                <ReviewsList>
-                  {dataset.reviews.map((review) => (
-                    <ReviewCard key={review.id}>
-                      <ReviewHeader>
-                        <div>
-                          <ReviewAuthor>{review.author}</ReviewAuthor>
-                          <ReviewDate>{formatDate(review.date)}</ReviewDate>
-                        </div>
-                        <ReviewRating>
-                          {Array.from({ length: 5 }).map((_, i) => (
-                            <FaStar key={i} style={{ opacity: i < review.rating ? 1 : 0.3 }} />
-                          ))}
-                        </ReviewRating>
-                      </ReviewHeader>
-                      <ReviewText>{review.text}</ReviewText>
-                    </ReviewCard>
-                  ))}
-                </ReviewsList>
-              </ReviewsSection>
+            <ReviewsSection>
+  <SectionTitle>Researcher Reviews</SectionTitle>
+  <ReviewsList>
+    {dataset.reviews.map((review) => (
+      <ReviewCard key={review.id}>
+        <ReviewHeader>
+          <div>
+            <ReviewAuthor>{review.author}</ReviewAuthor>
+            <ReviewDate>{formatDate(review.date)}</ReviewDate>
+          </div>
+          <ReviewRating>
+            {Array.from({ length: 5 }).map((_, i) => (
+              <FaStar key={i} style={{ opacity: i < review.rating ? 1 : 0.3 }} />
+            ))}
+          </ReviewRating>
+        </ReviewHeader>
+        <ReviewText>{review.text}</ReviewText>
+      </ReviewCard>
+    ))}
+  </ReviewsList>
+</ReviewsSection>
+
             </div>
           </MainContent>
           

@@ -1,15 +1,25 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+// import { useState } from 'react';
+// import { useNavigate } from 'react-router-dom';
+// import styled from 'styled-components';
+// import { motion } from 'framer-motion';
+// import { 
+//   FaUpload, FaCloudUploadAlt, FaTrash, FaLock, FaShieldAlt, 
+//   FaMoneyBillWave, FaTags, FaChartLine, FaExclamationCircle,
+//   FaCircle
+// } from 'react-icons/fa';
+// import { useAuth } from '../contexts/AuthContext';
+// import { toast } from 'react-toastify';
+import { useState, useEffect } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import { 
   FaUpload, FaCloudUploadAlt, FaTrash, FaLock, FaShieldAlt, 
   FaMoneyBillWave, FaTags, FaChartLine, FaExclamationCircle,
-  FaCircle
+  FaCircle, FaCheckCircle, FaFileAlt
 } from 'react-icons/fa';
 import { useAuth } from '../contexts/AuthContext';
 import { toast } from 'react-toastify';
-
 const UploadContainer = styled.div`
   padding: 2rem 1.5rem;
 `;
